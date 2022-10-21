@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*Barra de navegacion*/
+.nav{
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 1px 8px #ddd;
+  background-color: #fffcf2;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+}
+
+.menu{
+  display: flex;
+  align-items: center;
+  padding: 20px 50px;
+}
+
+.menu li {
+  list-style: none;
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #000;
+  transition: all 300ms;
+}
+
+.menu a:hover{
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 18px
+}
+
+.titulo{
+  display: flex;
+  flex-flow: column wrap;
+  padding: 10px 50px;
+}
+
+.titulo h1{
+  font-size: 20px;
+}
+.titulo h2{
+  font-size: 15px;
+}
+
+/*Componente Somos*/
+.somos{
+  margin-top: 70px;
+  padding: 20px 50px;
+  box-shadow: 0 1px 8px #ddd;
+  background-color: #fffcf2;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-logo {
+  height: 270px;
+  filter: brightness(1.25);
+}
+
+.somos p{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+/*Componente Trabajos*/
+.trabajos {
+  padding: 20px 50px;
+  box-shadow: 0 1px 8px #ddd;
+  background-color: #fffcfb;
+}
+
+.seccionContactenos,
+.seccionNosotros,
+.seccionTrabajos{
+  margin-top: 50px;
+}
+
+/*Componente Servicios*/
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+}
+
+.tarjeta {
+  display: flex;
+  justify-content: center;
+  flex: none;
+  width: 30%;
+  height: 300px;
+  margin: 15px;
+  padding: 10px;
+}
+
+/*Componente Nosotros*/
+.nosotros{
+  padding: 20px 50px;
+  box-shadow: 0 1px 8px #ddd;
+  background-color: #fffcf8;
+}
+
+
+/*Componente Contactenos*/
+.contactenos {
+  padding: 20px 50px;
+  box-shadow: 0 1px 8px #ddd;
+  background-color: #fffcf8;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 7px;
+  width: 45%;
+  padding: 3px;
+}
+
+.form-group label{
+  display: flex;
+}
+
+.form-group textarea{
+  height: 100px;
+}
+
+
+.seccionContactenos button{
+  display: flex;
+  margin-left: 15%;
+}
+
+/*Componente Footer*/
+.footer {
+  padding: 20px 50px;
+  box-shadow: 0 1px 8px #ddd;
+  background-color: #fffcff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+@media (max-width: 767px) {
+/*Barra de navegacion*/
+  .nav{
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+  }
+
+  .menu{
+    font-size: 15px;
+  }
+
+  .titulo h1,
+  .titulo h2 {
+    display: none;
+  }
+
+/*Componente Somos*/
+  .img-logo {
+    height: 200px;
+  }
+
+/*Componente Trabajos*/
+  .tarjeta{
+    width: 270px;
+    font-size: 15px;
+  }
+
+/*Componente Contactenos*/
+.form-group{
+  width: 250px;
+}
+
+.seccionContactenos button{
+  margin-left: 35%;
+}
+
+/*Componente Footer*/
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+}

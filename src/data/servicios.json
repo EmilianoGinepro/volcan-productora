@@ -1,0 +1,37 @@
+[
+    {
+        "id":"modal-1",
+        "titulo":"Banners Webs Animados",
+        "texto":"Es una publicidad que inserta un gráfico en una web para atraer usuarios a tu sitio o el de tu empresa."
+    },
+      {
+        "id":"modal-2",
+        "titulo":"Pack Gráfico Animado",
+        "texto":"Para que tu producto, curso web, canal de youtube y más… tenga su propia identidad gráfica de acuerdo a lo que tu empresa o vos quieran."
+    },
+    {
+        "id":"modal-3",
+        "titulo":"Anuncios Animados",
+        "texto":"Videos cortos para llamar la atención y aumentar la converciones. Tienen un alto impacto en los usuarios y te destacan de los demás."
+    },
+    {
+        "id":"modal-4",
+        "titulo":"Videos Tutoriales y Explicativos Animados",
+        "texto":">Una opción dinámica y amigable de crear tutoriales, videos explicativos, y educativos."
+    },
+    {
+        "id":"modal-5",
+        "titulo":"Institucionales",
+        "texto":"Los videos institucionales transmiten de manera profesional los valores, la visión y la historia de una empresa u organización…"
+    },
+    {
+        "id":"modal-6",
+        "titulo":"Videos Educativos/Tutoriales",
+        "texto":"Este tipo de material audiovisual tiene como objetivo educar sobre un tema en particular. Las personas usan Internet para informarse y aprender cosas nuevas…"
+    },
+        {
+        "id":"modal-7",
+        "titulo":"Curso web",
+        "texto":"Realizamos tus cursos web de principio a fin. te entregamos todo listo para subirlo a tu sitio que elijas par poder monetizarlo…"
+    }
+]
