@@ -172,7 +172,7 @@ code {
       top: 0;
       display: flex;
       justify-content: center;
-        flex-flow: column wrap;
+      flex-flow: column wrap;
     }
 
     .menu {
@@ -188,7 +188,8 @@ code {
     }
 
     .titulo h2 {
-      display: none;
+      font-size: 13px;
+      display: flex;
     }
 }
 
