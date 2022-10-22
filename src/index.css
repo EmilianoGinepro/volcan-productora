@@ -191,11 +191,34 @@ code {
     .titulo h2 {
     display: none;
     }
+
+/*Componente Trabajos*/
+.tarjeta {
+  width: 270px;
+  font-size: 15px;
+}
+
+/*Componente Contactenos*/
+.form-group {
+  width: 250px;
+}
+
+.seccionContactenos button {
+  margin-left: 35%;
+}
+
+/*Componente Footer*/
+.footer {
+  display: flex;
+  flex-direction: column;
+}
+
 }
 
 @media (max-width: 411px) {
 /*Barra de navegacion*/
   .nav{
+    height: 85px;
     position: fixed;
     z-index: 1000;
     top: 0;
