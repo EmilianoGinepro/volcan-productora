@@ -181,6 +181,12 @@ code {
       padding: 0px;
     }
 
+    .menu a:hover {
+/*       text-decoration: underline;
+      font-weight: bold; */
+      font-size: 14px
+    }
+
     .titulo h1 {
       display: flex;
       font-size: 15px;
