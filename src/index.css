@@ -185,6 +185,7 @@ code {
       display: flex;
       font-size: 15px;
       font-weight: bold;
+      margin-top: 10px;
     }
 
     .titulo h2 {
