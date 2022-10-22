@@ -235,9 +235,9 @@ code {
   }
 
   .menu a:hover {
-/*     text-decoration: underline;
-    font-weight: bold; */
-    font-size: 14px
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 13px
   }
 
   .titulo h1{
