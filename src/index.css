@@ -231,6 +231,13 @@ code {
     font-size: 13px;
     display: flex;
     padding: 0px;
+    margin-right: 2px;
+  }
+
+  .menu a:hover {
+/*     text-decoration: underline;
+    font-weight: bold; */
+    font-size: 15px
   }
 
   .titulo h1{
