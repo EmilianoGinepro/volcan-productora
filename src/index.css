@@ -189,8 +189,7 @@ code {
     }
 
     .titulo h2 {
-      font-size: 13px;
-      display: flex;
+    display: none;
     }
 }
 
