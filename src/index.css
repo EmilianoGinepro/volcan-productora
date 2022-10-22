@@ -164,7 +164,35 @@ code {
   align-items: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width:800px){
+  /*Barra de navegacion*/
+    .nav {
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      display: flex;
+      justify-content: center;
+        flex-flow: column wrap;
+    }
+
+    .menu {
+      font-size: 13px;
+      display: flex;
+      padding: 0px;
+    }
+
+    .titulo h1 {
+      display: flex;
+      font-size: 15px;
+      font-weight: bold;
+    }
+
+    .titulo h2 {
+      display: none;
+    }
+}
+
+@media (max-width: 411px) {
 /*Barra de navegacion*/
   .nav{
     position: fixed;
@@ -172,6 +200,7 @@ code {
     top: 0;
     display: flex;
     justify-content: center;
+    flex-flow:nowrap
   }
 
   .menu{
@@ -183,7 +212,7 @@ code {
   .titulo h1{
     display: flex;
     font-size: 15px;
-    font-weight: bold
+    font-weight: bold;
   }
 
   .titulo h2 {
