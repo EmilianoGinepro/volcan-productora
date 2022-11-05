@@ -1,10 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card, Button, Modal  } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
-import Data from '../data/servicios.json'
+//import Data from '../data/servicios.json'
+import Servicio from '../services/servicioService'
+
 
 const Servicios = () => {
 
+    const [servicios, setServicios] = useState([])
     const [show1, setShow1] = useState(false);
     const [show2, setShow2] = useState(false);
     const [show3, setShow3] = useState(false);
@@ -20,6 +23,14 @@ const Servicios = () => {
     let keyModal6 = '';
     let keyModal7 = '';
 
+    useEffect(() => {
+    Servicio.getServicios()
+      .then((servicio) => {
+        setServicios(servicio)
+      })
+    }, [])
+
+  console.log(servicios);
 
     const showModal = (id) => {
 
@@ -55,19 +66,19 @@ const Servicios = () => {
         setShow5(false);
         setShow6(false);
         setShow7(false);
-    }
+  }
 
   return (
     <>
         <div className='tarjetas'>
-            {Data.map((dato) => {
-                const {id,titulo,texto} = dato
+            {servicios.map((dato) => {
+                const {modal,titulo,texto} = dato
                 return <div className='tarjeta'>
-                    <Card key={id} >
+                    <Card key={modal} >
                         <Card.Body >
                             <Card.Title>{titulo}</Card.Title>
                             <Card.Text>{texto}</Card.Text>
-                            <Button variant="primary" onClick={e=>showModal(id)}>Seguir leyendo…</Button>
+                            <Button variant="primary" onClick={e=>showModal(modal)}>Seguir leyendo…</Button>
                         </Card.Body>
                     </Card>
                 </div>

@@ -3,6 +3,7 @@ import { Form, Button } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
 import Swal from 'sweetalert2';
 import withReactContent from 'sweetalert2-react-content';
+import Send from '../services/sendEmailService'
 
 const Contactenos = () => {
 
@@ -26,10 +27,11 @@ const Contactenos = () => {
     { "id": "8", "nombre": "Otros"}
   ];
 
-  const sendForm = (e) => {
+  const sendForm = async (e) => {
     e.preventDefault();
 
     const resultOpcion = opciones.find(op => op.id === opcion);
+    const sendOPtion = resultOpcion.nombre;
 
     if (!nombre || !email || !textArea || !opcion) {
       setValidated(true);
@@ -41,14 +43,24 @@ const Contactenos = () => {
         timer: "4000"
       })
     } else {
-      console.log(nombre, empresa, email, resultOpcion.nombre, textArea);
+      try {
+        await Send.postSendEmail({
+          nombre,
+          empresa,
+          email,
+          sendOPtion,
+          textArea
+        })
+        MySwal.fire({
+          title: "Volcan",
+          text: "Nos vamos a contactar con usted lo antes posible y poder contarte qué podemos hacer con tus necesidades",
+          icon: "success",
+          timer: 6000
+        });
+      } catch (err) {
+        console.log(err);
+      }
 
-      MySwal.fire({
-        title: "Volcan",
-        text: "Nos vamos a contactar con usted lo antes posible y poder contarte qué podemos hacer con tus necesidades",
-        icon: "success",
-        timer: 6000
-      });
 
     setNombre('');
     setEmpresa('');
