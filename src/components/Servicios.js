@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Card, Button, Modal  } from 'react-bootstrap';
 import "bootstrap/dist/css/bootstrap.min.css";
-//import Data from '../data/servicios.json'
 import Servicio from '../services/servicioService'
 
 
@@ -29,8 +28,6 @@ const Servicios = () => {
         setServicios(servicio)
       })
     }, [])
-
-  console.log(servicios);
 
     const showModal = (id) => {
 
@@ -72,9 +69,9 @@ const Servicios = () => {
     <>
         <div className='tarjetas'>
             {servicios.map((dato) => {
-                const {modal,titulo,texto} = dato
+                const {id,modal,titulo,texto} = dato
                 return <div className='tarjeta'>
-                    <Card key={modal} >
+                    <Card key={id} >
                         <Card.Body >
                             <Card.Title>{titulo}</Card.Title>
                             <Card.Text>{texto}</Card.Text>
