@@ -12,8 +12,8 @@ const Contactenos = () => {
   const [nombre, setNombre] = useState('');
   const [empresa, setEmpresa] = useState('');
   const [email, setEmail] = useState('');
-  const [opcion, setOpcion] = useState('');
-  const [textArea, setTextArea] = useState('');
+  const [opc, setOpc] = useState('');
+  const [textarea, setTextArea] = useState('');
   const [validated, setValidated] = useState(false);
 
   const opciones = [
@@ -30,10 +30,7 @@ const Contactenos = () => {
   const sendForm = async (e) => {
     e.preventDefault();
 
-    const resultOpcion = opciones.find(op => op.id === opcion);
-    const sendOPtion = resultOpcion.nombre;
-
-    if (!nombre || !email || !textArea || !opcion) {
+    if (!nombre || !email || !textarea || !opc) {
       setValidated(true);
       MySwal.fire({
         title: "Volcan",
@@ -44,12 +41,14 @@ const Contactenos = () => {
       })
     } else {
       try {
+        const resultOpcion = opciones.find(op => op.id === opc);
+        const opcion = resultOpcion.nombre;
         await Send.postSendEmail({
           nombre,
           empresa,
           email,
-          sendOPtion,
-          textArea
+          opcion,
+          textarea
         })
         MySwal.fire({
           title: "Volcan",
@@ -65,7 +64,7 @@ const Contactenos = () => {
     setNombre('');
     setEmpresa('');
     setEmail('');
-    setOpcion('');
+    setOpc('');
     setTextArea('');
     };
 
@@ -108,7 +107,7 @@ const Contactenos = () => {
 
             <Form.Group className="form-group" controlId="formEmail">
                 <Form.Label>Elija que servicio desea</Form.Label>
-                <Form.Select onChange={({ target }) => setOpcion(target.value)} value={opcion}>
+                <Form.Select onChange={({ target }) => setOpc(target.value)} value={opc}>
                       <option value="1">Banners Webs Animados</option>
                       <option value="2">Pack Gráfico Animado</option>
                       <option value="3">Anuncios Animados</option>
@@ -126,7 +125,7 @@ const Contactenos = () => {
                     required
                     as="textarea"
                     onChange={({ target }) => setTextArea(target.value)}
-                    value={textArea}
+                    value={textarea}
                     placeholder='No olvides contarnos tus objetivos y compartirnos alguna referencia.'
                 />
             </Form.Group>

@@ -70,7 +70,7 @@ const Servicios = () => {
         <div className='tarjetas'>
             {servicios.map((dato) => {
                 const {id,modal,titulo,texto} = dato
-                return <div className='tarjeta'>
+                return <div className='tarjeta' key={id}>
                     <Card key={id} >
                         <Card.Body >
                             <Card.Title>{titulo}</Card.Title>
